@@ -304,5 +304,8 @@ template {
 [hidden] {
   display: none;
 }
+body {
+  font-size: 25px;
+}
 
 /*# sourceMappingURL=style.css.map */
