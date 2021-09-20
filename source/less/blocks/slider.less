@@ -1,10 +1,6 @@
 .slider {
-display: flex;
-justify-content: space-between;
-border-bottom: 2.2px solid @border-red;
-@media (min-width: @tablet) {
-border-width: 4.5px;
-}
+  position: relative;
+  overflow: hidden;
 }
 .slider__button {
 background-color: transparent;
@@ -29,7 +25,6 @@ padding: 40px;
 .slider__button-right {
 transform: rotate(-180deg);
 }
-
 .slider__slide {
       width: 78%;
     height: 80%;
@@ -38,19 +33,70 @@ align-self: center;
   @media (min-width: @mobile) {
     width: 293px;
     height: 178px;
-
-
   }
     @media (min-width: @tablet) {
     width: 600px;
     height: 364px;
-
-
   }
       @media (min-width: @desktop) {
     width: 796px;
     height: 483px;
-
-
   }
+}
+.slider__slide-list {
+  ._list();
+  position: relative;
+  z-index: 1;
+}
+.slider__controls {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.slider__slide {
+display: flex;
+justify-content: center;
+align-content: center;
+width: 100%;
+padding: 5% 10%;
+@media (min-width: @mobile) {
+padding-top: 20px;
+padding-bottom: 22px;
+}
+@media (min-width: @tablet) {
+padding-top: 40px;
+padding-bottom: 47px;
+}
+@media (min-width: @desktop) {
+padding-top: 54px;
+padding-bottom: 63px;
+}
+}
+.slider__slide-1 {
+background-color: @base-red;
+border-bottom: 2.2px solid @border-red;
+@media (min-width: @tablet) {
+border-width: 4.5px;
+}
+}
+.slider__slide-2 {
+  background-color: @light-blue;
+border-bottom: 2.2px solid @light-blue;
+@media (min-width: @tablet) {
+border-width: 4.5px;
+}
+}
+.slider__slide--not-current {
+position: absolute;
+top: 0;
+z-index: 2;
+}
+.slider__slide--current {
+  z-index:3;
+position: relative;
+top: 0;
 }

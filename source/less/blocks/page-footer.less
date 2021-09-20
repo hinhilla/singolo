@@ -1,8 +1,6 @@
 .page-footer {
-
 background-color: @base-blue;
-padding-top: 22px;
-padding-bottom: 22px;
+padding: 22px 0;
 
 }
 .page-footer__inner {
@@ -38,4 +36,17 @@ justify-content: space-between;
   align-items: center;
 
 }
+.page-footer__navigation-item:hover {
+border-color: @section-descriptions-grey;
+cursor: pointer;
+}
 
+.page-footer__navigation-svg {
+  color: @section-headers-grey;
+}
+.page-footer__navigation-item:hover .page-footer__navigation-svg {
+  color: @section-descriptions-grey;
+}
+.page-footer__navigation-link:focus .page-footer__navigation-svg {
+  color: @base-red;
+}
