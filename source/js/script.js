@@ -43,3 +43,41 @@ sliderButtonLeft.addEventListener('click', () => {
   slideNotCurrent.classList.remove('animation--not-current-left');
   slideNotCurrent.classList.add('animation--current-left');
 })
+
+
+const portfolioButtons = document.querySelectorAll('.portfolio__item-button');
+const portfolioList = document.querySelector('.portfolio__list');
+
+const moveArrayByOne = (array) => {
+  let newArray = new Array(array.length).fill();
+  newArray[0] = array[array.length - 1];
+  array.forEach((element, index) => {
+    if (index < array.length - 1) {
+      newArray[index + 1] = element;
+    }
+  })
+  return newArray;
+}
+
+const renderFragmentFromArray = (array) => {
+  let fragment = document.createDocumentFragment();
+  array.forEach((element) => {
+    fragment.appendChild(element);
+
+  })
+  return fragment;
+}
+const showNewFragmentOnPage = (fragment, placeOnPage) => {
+  placeOnPage.innerHTML = "";
+  placeOnPage.appendChild(fragment);
+}
+
+
+portfolioButtons.forEach((portfolioButton) => {
+  portfolioButton.addEventListener('click', () => {
+    const portfolioItems = document.querySelectorAll('.portfolio__item');
+    const moved = moveArrayByOne(portfolioItems);
+    const rendered = renderFragmentFromArray(moved);
+    showNewFragmentOnPage(rendered, portfolioList);
+  })
+})
