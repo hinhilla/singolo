@@ -1,0 +1,45 @@
+@keyframes next {
+    0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes prev-out{
+    0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes prev {
+    0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes next-out{
+    0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.prev {
+  animation: prev 1s ease-in-out;
+}
+.prev-out {
+    animation: prev-out 1s ease-in-out;
+}
+.next {
+  animation: next 1s ease-in-out;
+}
+.next-out{
+    animation: next-out 1s ease-in-out;
+}

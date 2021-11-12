@@ -1,128 +1,332 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Singolo</title>
   <link rel="stylesheet" href="./css/style.min.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
-<body class="page-body">
-  <header class="page-header">
-    <nav class="page-header__navigation">
-      <button class="page-header__navigation-button">
-        <span class="visually-hidden">navigation</span>
-      </button>
-      <ul class="page-header__navigation-list">
-        <li class="page-header__navigation-item"> <a>home</a> </li>
-        <li class="page-header__navigation-item"> <a href="#">services</a></li>
-        <li class="page-header__navigation-item"> <a href="#">portfolio</a></li>
-        <li class="page-header__navigation-item"> <a href="#">about</a></li>
-        <li class="page-header__navigation-item"> <a href="#">contact</a></li>
-      </ul>
-    </nav>
-    <h1 class="page-header__logo">
-      <span class="page-header__logo-name">singolo</span>
-      <span class="page-header__logo-symbol">*</span>
-    </h1>
+<body class="page__body">
+  <header class="page__header page-header">
+    <div class="center--header">
+      <div class="page-header__inner">
+        <h1 class="page-header__logo" id="home">
+          <span class="page-header__logo-name">singolo</span>
+          <span class="page-header__logo-symbol">*</span>
+        </h1>
+        <nav class="page-header__navigation" id="menu">
+          <button class="page-header__navigation-button">
+            <span class="visually-hidden">navigation</span>
+          </button>
+          <div class="page-header__navigation-list-wrapper">
+            <ul class="page-header__navigation-list">
+              <li class="page-header__navigation-item"> <a href="#home" class="page-header__navigation-link">home</a>
+              </li>
+              <li class="page-header__navigation-item">
+                <a href="#services" class="page-header__navigation-link">services</a>
+              </li>
+              <li class="page-header__navigation-item">
+                <a href="#portfolio" class="page-header__navigation-link">portfolio</a>
+              </li>
+              <li class="page-header__navigation-item">
+                <a class="page-header__navigation-link">about</a>
+              </li>
+              <li class="page-header__navigation-item">
+                <a href="#contact" class="page-header__navigation-link">contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
   </header>
   <main class="page-main">
-    <section class="page-main__services services">
-      <div class="page-main__slider slider">
-        <button class="slider__button-left"></button>
-        <button class="slider__button-rigth"></button>
-        <img src="" alt="" class="slider__slide">
+    <div class="page-main__slider-wrapper">
+      <div class="center--slider">
+        <div class="page-main__slider slider">
+          <ul class="slider__slide-list">
+            <li class="slider__slide slider__slide-1 slider__slide--is-active">
+              <img src="img/slider-1.png" alt="телефоны" class="slider__slide-img" width="796" height="483">
+            </li>
+            <li class="slider__slide slider__slide-2">
+              <img src="img/slider-2.png" alt="телефоны" class="slider__slide-img" width="796" height="483">
+            </li>
+          </ul>
+          <div class="slider__controls">
+            <button class="slider__button slider__button-prev" data-direction="prev">
+              <svg class="slider__button-svg" width="17" height="29">
+                <use xlink:href=" #arrow"></use>
+              </svg>
+            </button>
+            <button class="slider__button slider__button-next" data-direction="next">
+              <svg class="slider__button-svg" width="17" height="29">
+                <use xlink:href=" #arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
-      <h2 class="services__title">Our Services</h2>
-      <p class="services__paragraph">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-        Duis mollis, non commodo luctus, nisi
-        erat porttitor
-        ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-        condimentum nibh.</p>
-      <ul class="services__list">
-        <li class="services__item">
-          <h3 class="services__item-title">Custom Design</h3>
-          <p class="services__item-paragraph">Curabitur vestibulum eget mauris quis laoreet.
-            Phasellus in quam laoreet, viverra lacus ut,
-            ultrices velit.</p>
-        </li>
-        <li class="services__item">
-          <h3 class="services__item-title">Inovative Ideas</h3>
-          <p class="services__item-paragraph">Quisque luctus, quam eget molestie commodo, lacus
-            purus cursus purus, nec rutrum tellus dolor id
-            lorem.</p>
-        </li>
-        <li class="services__item">
-          <h3 class="services__item-title">Love Is The Answer</h3>
-          <p class="services__item-paragraph">Nulla sed nunc et tortor luctus faucibus. Morbi at
-            aliquet turpis, et consequat felis. Quisque
-            condimentum.</p>
-        </li>
-        <li class="services__item">
-          <h3 class="services__item-title">Responsive Layout
-          </h3>
-          <p class="services__item-paragraph">Sed porttitor placerat rhoncus. In at nunc tellus.
-            Maecenas blandit nunc ligula. Praesent elit
-            leo.</p>
-        </li>
-        <li class="services__item">
-          <h3 class="services__item-title">24 / 7 Support</h3>
-          <p class="services__item-paragraph">Vivamus vel quam lacinia, tincidunt dui non, vehicula
-            nisi. Nulla a sem erat. Pellentesque
-            egestas venenatis lorem .</p>
-        </li>
-        <li class="services__item">
-          <h3 class="services__item-title">Feel Like A Star</h3>
-          <p class="services__item-paragraph">Quisque hendrerit purus dapibus, ornare nibh vitae,
-            viverra nibh. Fusce vitae aliquam tellus.</p>
-        </li>
-      </ul>
-    </section>
-    <section class="page-main__portfolio portfolio">
-      <h2 class="portfolio__title">Portfolio</h2>
-      <p class="portfolio__paragraph">Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-        eget lacinia odio sem nec elit.</p>
-      <nav class="portfolio__navigation">
-        <ul class="portfolio__navigation-list">
-          <li class="portfolio__navigation-item"><button class="portfolio__item-button">All</button></li>
-          <li class="portfolio__navigation-item"><button class="portfolio__item-button">Web Design</button>
-          </li>
-          <li class="portfolio__navigation-item"><button class="portfolio__item-button">Graphic
-              Design</button></li>
-          <li class="portfolio__navigation-item"><button class="portfolio__item-button">Artwork</button></li>
+    </div>
+    <div class="page-main__services-wrapper">
+      <div class=" center">
+        <section class="page-main__services services" id="services">
+          <h2 class="services__title header">Our Services</h2>
+          <p class="services__paragraph text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
+            Duis mollis, non commodo luctus, nisi
+            erat porttitor
+            ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+            condimentum nibh.</p>
+          <ul class="services__list">
+            <li class="services__item">
+              <div class="services__circle">
+                <svg class="services__svg" width="32" height="32">
+                  <use xlink:href=" #services-1"></use>
+                </svg>
+              </div>
+              <h3 class="services__item-title">Custom Design</h3>
+              <p class="services__item-paragraph">Curabitur vestibulum eget mauris quis laoreet.
+                Phasellus in quam laoreet, viverra lacus ut,
+                ultrices velit.</p>
+            </li>
+            <li class="services__item">
+              <div class="services__circle">
+                <svg class="services__svg" width="22" height="32">
+                  <use xlink:href=" #services-2"></use>
+                </svg>
+              </div>
+              <h3 class="services__item-title">Inovative Ideas</h3>
+              <p class="services__item-paragraph">Quisque luctus, quam eget molestie commodo, lacus
+                purus cursus purus, nec rutrum tellus dolor id
+                lorem.</p>
+            </li>
+            <li class="services__item">
+              <div class="services__circle">
+                <svg class="services__svg" width="32" height="28">
+                  <use xlink:href=" #services-3"></use>
+                </svg>
+              </div>
+              <h3 class="services__item-title">Love Is The Answer</h3>
+              <p class="services__item-paragraph">Nulla sed nunc et tortor luctus faucibus. Morbi at
+                aliquet turpis, et consequat felis. Quisque
+                condimentum.</p>
+            </li>
+            <li class="services__item">
+              <div class="services__circle">
+                <svg class="services__svg" width="22" height="32">
+                  <use xlink:href=" #services-4"></use>
+                </svg>
+              </div>
+              <h3 class="services__item-title">Responsive Layout
+              </h3>
+              <p class="services__item-paragraph">Sed porttitor placerat rhoncus. In at nunc tellus.
+                Maecenas blandit nunc ligula. Praesent elit
+                leo.</p>
+            </li>
+            <li class="services__item">
+              <div class="services__circle">
+                <svg class="services__svg" width="32" height="28">
+                  <use xlink:href=" #services-5"></use>
+                </svg>
+              </div>
+              <h3 class="services__item-title">24 / 7 Support</h3>
+              <p class="services__item-paragraph">Vivamus vel quam lacinia, tincidunt dui non, vehicula
+                nisi. Nulla a sem erat. Pellentesque
+                egestas venenatis lorem .</p>
+            </li>
+            <li class="services__item">
+              <div class="services__circle">
+                <svg class="services__svg" width="32" height="32">
+                  <use xlink:href=" #services-6"></use>
+                </svg>
+              </div>
+              <h3 class="services__item-title">Feel Like A Star</h3>
+              <p class="services__item-paragraph">Quisque hendrerit purus dapibus, ornare nibh vitae,
+                viverra nibh. Fusce vitae aliquam tellus.</p>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+
+    <section class="page-main__portfolio portfolio" id="portfolio">
+      <div class="center">
+        <h2 class="portfolio__title header">Portfolio</h2>
+        <p class="portfolio__paragraph text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+          eget lacinia odio sem nec elit.</p>
+        <nav class="portfolio__navigation">
+          <ul class="portfolio__navigation-list">
+            <li class="portfolio__navigation-item"><button class="portfolio__item-button"
+                data-item="all-button">All</button></li>
+            <li class="portfolio__navigation-item"><button class="portfolio__item-button"
+                data-item="web-design-button">Web Design</button>
+            </li>
+            <li class="portfolio__navigation-item"><button class="portfolio__item-button"
+                data-item="graphic-design-button">Graphic
+                Design</button></li>
+            <li class="portfolio__navigation-item"><button class="portfolio__item-button"
+                data-item="artwork-button">Artwork</button></li>
+          </ul>
+        </nav>
+        <ul class="portfolio__list">
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-1.jpg" alt="Изображение 1"
+              width="128" height=" 108.5" class="portfolio__image"></li>
+          <li class="portfolio__item" data-item="artwork"><img src="img/portfolio-2.jpg" alt="Изображение 2"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-3.jpg" alt="Изображение 3"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="graphic-design"><img src="img/portfolio-4.jpg" alt="Изображение 4"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-5.jpg" alt="Изображение 5"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="artwork"><img src="img/portfolio-6.jpg" alt="Изображение 6"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-7.jpg" alt="Изображение 7"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="graphic-design"><img src="img/portfolio-8.jpg" alt="Изображение 8"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-9.jpg" alt="Изображение 9"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="artwork"><img src="img/portfolio-10.jpg" alt="Изображение 10"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-11.jpg" alt="Изображение 11"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="graphic-design"><img src="img/portfolio-12.jpg" alt="Изображение 12"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          `
         </ul>
-      </nav>
-      <ul class="portfolio__list">
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-        <li class="portfolio__item"><img src="" alt="" class="portfolio__image"></li>
-      </ul>
+      </div>
     </section>
+
   </main>
   <footer class="page-footer">
-    <p class="page-footer__copyright">© Copyright 2013</p>
-    <nav class="page-footer__navigation">
-      <ul class="page-footer__navigation-list">
-        <li class="page-footer__navigation-item">facebook</li>
-        <li class="page-footer__navigation-item">google</li>
-        <li class="page-footer__navigation-item">twitter</li>
-        <li class="page-footer__navigation-item">instagram</li>
-      </ul>
-    </nav>
+    <div class="center">
+      <div class="page-footer__inner">
+
+
+        <p class="page-footer__copyright">© Copyright 2013</p>
+        <nav class="page-footer__navigation" id="contact">
+          <ul class="page-footer__navigation-list">
+
+            <li class="page-footer__navigation-item">
+              <a href="#" class="page-footer__navigation-link">
+                <span class="visually-hidden">facebook</span>
+                <svg class="page-footer__navigation-svg" width="8" height="14">
+                  <use xlink:href=" #facebook"></use>
+                </svg>
+              </a>
+
+            </li>
+            <li class="page-footer__navigation-item">
+              <a href="#" class="page-footer__navigation-link">
+                <span class="visually-hidden">google</span>
+                <svg class="page-footer__navigation-svg" width="14" height="14">
+                  <use xlink:href=" #google"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="page-footer__navigation-item">
+              <a href="#" class="page-footer__navigation-link">
+                <span class="visually-hidden">twitter</span>
+                <svg class="page-footer__navigation-svg" width="14" height="12">
+                  <use xlink:href=" #twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="page-footer__navigation-item">
+              <a href="#" class="page-footer__navigation-link">
+                <span class="visually-hidden">instagram</span>
+                <svg class="page-footer__navigation-svg" width="14" height="14">
+                  <use xlink:href=" #instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </footer>
   <script src="./js/script.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#menu").on("click", "a", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+          top = $(id).offset().top;
+        $('body,html').animate({ scrollTop: top }, 1000);
+      });
+    });
+  </script>
+  <svg style="display: none;">
+    <symbol id="arrow" width="100%" height="100%" viewBox="0 0 17 29" preserveAspectRatio="xMinYMin meet">
+      <path
+        d="M15.7198 4.70316C16.651 3.74179 16.6501 2.22565 15.7179 1.26528C14.7289 0.246535 13.081 0.246535 12.0921 1.26528L1.37275 12.3079C0.0992186 13.6198 0.0992211 15.6913 1.37275 17.0032L12.0921 28.0458C13.081 29.0646 14.7289 29.0646 15.7179 28.0458C16.6501 27.0855 16.651 25.5693 15.7198 24.6079L8.35115 17.0006C7.08107 15.6893 7.08107 13.6218 8.35115 12.3105L15.7198 4.70316Z"
+        fill="#E94348" />
+    </symbol>
+
+
+    <symbol id="instagram" width="100%" height="100%" viewBox="0 0 14 14" preserveAspectRatio="xMinYMin meet">
+      <path
+        d="M0.0787113 4.23402H3.07192V14H0.0787113V4.23402ZM3.17008 1.51788C3.17008 2.35642 2.55967 3.03561 1.55525 3.03561C0.610402 3.03561 0 2.35642 0 1.51788C0 0.658996 0.630157 0 1.59476 0C2.55967 0 3.15063 0.658996 3.17008 1.51788Z"
+        fill="currentColor" />
+      <path
+        d="M4.86295 7.3448C4.86295 6.12668 4.82375 5.10829 4.78455 4.22936H7.38342L7.52171 5.58743H7.58066C7.97438 4.94815 8.93929 4.00944 10.5541 4.00944C12.5231 4.00944 14 5.34778 14 8.22341V13.9953H11.0068V8.58312C11.0068 7.32477 10.5736 6.46635 9.49043 6.46635C8.66349 6.46635 8.17162 7.04536 7.95493 7.60449C7.87591 7.80407 7.85615 8.08395 7.85615 8.36351V13.9953H4.86295V7.3448Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="twitter" width="100%" height="100%" viewBox="0 0 14 12" preserveAspectRatio="xMinYMin meet">
+      <path
+        d="M14 1.42039C13.4846 1.66146 12.9313 1.8242 12.3501 1.89755C12.9435 1.52263 13.3988 0.928793 13.6133 0.221485C13.0582 0.568478 12.4434 0.820779 11.7894 0.956559C11.2653 0.367697 10.5187 0 9.69272 0C8.10646 0 6.82044 1.35636 6.82044 3.02921C6.82044 3.26675 6.8457 3.49786 6.89485 3.71951C4.50785 3.59336 2.39081 2.38722 0.974522 0.554355C0.727239 1.00198 0.585565 1.52231 0.585565 2.07747C0.585565 3.1284 1.09261 4.05543 1.86322 4.59887C1.3927 4.58314 0.949566 4.44704 0.562283 4.22009C0.561979 4.23261 0.561979 4.24529 0.561979 4.25813C0.561979 5.72587 1.55233 6.9503 2.86604 7.22844C2.62531 7.29778 2.37148 7.33501 2.10928 7.33501C1.92439 7.33501 1.74467 7.31591 1.56907 7.2806C1.93459 8.48401 2.9957 9.36 4.2522 9.38423C3.269 10.197 2.03091 10.6812 0.685087 10.6812C0.453326 10.6812 0.224761 10.6668 0 10.6385C1.27096 11.4983 2.78037 12 4.403 12C9.68587 12 12.5752 7.38364 12.5752 3.38038C12.5752 3.24941 12.5725 3.11861 12.5668 2.98844C13.1281 2.56152 13.6149 2.02803 14 1.42039Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="google" width="100%" height="100%" viewBox="0 0 14 14" preserveAspectRatio="xMinYMin meet">
+      <path
+        d="M11.6565 5.47432V3.08795H10.1722V5.47432H7.82873V6.98568H10.1722V9.37205H11.6565V6.98568H14V5.47432H11.6565ZM5.60365 2.72539C5.95611 3.98745 5.42382 5.30727 4.57594 5.55052C4.4786 5.57836 4.37752 5.59268 4.27566 5.59268C3.4987 5.59268 2.72878 4.7923 2.44381 3.68995C2.28461 3.07061 2.29742 2.52923 2.48021 2.00868C2.65988 1.49657 2.98235 1.1507 3.38856 1.03441C3.48621 1.00625 3.5876 0.991932 3.68915 0.991932C4.62718 0.991932 5.23009 1.38791 5.60365 2.72539ZM6.54168 10.6602C6.61026 11.7791 5.67051 12.6045 4.25941 12.7091C2.82612 12.8157 1.64624 12.1587 1.57749 11.0412C1.54422 10.5045 1.77622 9.97802 2.22993 9.55914C2.69035 9.13452 3.32232 8.87266 4.0099 8.82111C4.09099 8.81586 4.1716 8.81252 4.25175 8.81252C5.57834 8.81252 6.47668 9.60655 6.54168 10.6602ZM0.742736 3.49093C0.742736 4.67902 1.13238 5.53684 1.90074 6.04084C2.52959 6.45336 3.26014 6.51509 3.63947 6.51509C3.73149 6.51509 3.80539 6.51159 3.85695 6.50809C3.85695 6.50809 3.73649 7.30609 4.31768 8.09598L4.29144 8.09582C3.28451 8.09582 0 8.30996 0 11.0594C0 13.857 3.01657 13.999 3.62166 13.999C3.669 13.999 3.69681 13.9981 3.69681 13.9981C3.70353 13.9983 3.7468 14 3.82039 14C4.20879 14 5.21275 13.9502 6.145 13.4888C7.35425 12.891 7.96793 11.8513 7.96793 10.3985C7.96793 8.99452 7.03319 8.15898 6.35091 7.54823C5.93439 7.17627 5.57459 6.85491 5.57459 6.54246C5.57459 6.22411 5.83737 5.98484 6.16968 5.68177C6.70791 5.19161 7.21504 4.494 7.21504 3.1753C7.21504 2.016 7.0674 1.23789 6.15812 0.744228C6.25295 0.69475 6.58808 0.658636 6.754 0.635409C7.24676 0.566841 7.96793 0.489046 7.96793 0.0792275V0H4.37533C4.3394 0.000954546 0.742736 0.136659 0.742736 3.49093Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="facebook" width="100%" height="100%" viewBox="0 0 8 14" preserveAspectRatio="xMinYMin meet">
+      <path
+        d="M8 2.43382H5.71472C5.44464 2.43382 5.14288 2.77931 5.14288 3.24147V4.84602H8V7.13269H5.14288V14H2.4456V7.13269H0V4.84602H2.4456V3.5C2.4456 1.56987 3.82336 0 5.71472 0H8V2.43382Z"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="services-1" width="100%" height="100%" viewBox="0 0 32 32" preserveAspectRatio="xMinYMin meet">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M29.396 2.58C27.75 0.938 25.585 0 23.449 0C21.649 0 19.99 0.668 18.78 1.877L13.913 6.781C13.898 6.795 13.881 6.805 13.866 6.819C13.858 6.827 13.854 6.838 13.846 6.846L13.848 6.848L3.518 17.256C3.042 17.728 2.696 18.319 2.505 18.961L0.156 27.469C0.153 27.492 0 28.161 0 28.5C0 30.433 1.569 32 3.505 32C3.89 32 4.635 31.817 4.662 31.813L13.14 29.584C13.783 29.393 14.369 29.045 14.845 28.568L30.107 13.186C32.884 10.406 32.571 5.75 29.396 2.58ZM16.015 23.796C15.933 22.893 15.678 22.008 15.296 21.168L24.75 11.715C25.328 13.541 25.032 15.451 23.765 16.719C23.757 16.727 23.747 16.731 23.739 16.739L23.752 16.752L16.024 24.541C16.025 24.293 16.037 24.049 16.015 23.796ZM14.794 20.256C14.421 19.643 13.997 19.052 13.472 18.528C12.86 17.916 12.159 17.438 11.428 17.035L20.96 7.504C21.707 7.836 22.425 8.309 23.058 8.941C23.598 9.481 24.017 10.084 24.338 10.712L14.794 20.256ZM10.486 16.563C9.561 16.19 8.59 15.977 7.618 15.964L15.321 8.202C16.5 7.052 18.218 6.721 19.909 7.141L10.486 16.563ZM4.168 29.873C4.059 29.899 3.72 29.985 3.489 30C2.667 29.991 2 29.322 2 28.5C2.012 28.333 2.079 28.044 2.102 27.937L3.154 24.123C4.297 24.092 5.527 24.537 6.494 25.506C7.477 26.487 7.939 27.741 7.888 28.897L4.168 29.873ZM8.874 28.637C8.85 27.296 8.304 25.9 7.202 24.8C6.16 23.756 4.797 23.154 3.437 23.101L4.433 19.493C4.505 19.253 4.647 19.017 4.823 18.809C6.829 17.373 9.914 17.797 12.058 19.942C14.324 22.208 14.675 25.528 12.929 27.51C12.813 27.57 12.695 27.629 12.569 27.667L8.874 28.637ZM28.692 11.773L27.008 13.47C27.008 13.244 27.035 13.027 27.015 12.796C26.839 10.861 25.936 8.99 24.472 7.527C22.843 5.898 20.682 4.962 18.543 4.956L20.2 3.286C21.027 2.459 22.184 2 23.449 2C25.06 2 26.712 2.728 27.982 3.995C29.176 5.186 29.888 6.666 29.988 8.163C30.082 9.561 29.622 10.842 28.692 11.773Z"
+        fill="#666D89" />
+    </symbol>
+
+
+    <symbol id="services-2" width="100%" height="100%" viewBox="0 0 22 32" preserveAspectRatio="xMinYMin meet">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M16.969 23.078C14.965 28.666 15.25 32 11 32C6.813 32 7.034 28.651 5.031 23.055C3.689 19.303 0 15.031 0 11C0 4.925 4.925 0 11 0C17.075 0 22 4.925 22 11C22 15 18.316 19.319 16.969 23.078ZM11 30C12.181 30 12.628 29.873 13.241 28.22L9.003 28.75C9.521 29.884 9.987 30 11 30ZM8.036 25.903C8.267 26.684 8.457 27.283 8.634 27.796L13.593 27.176C13.703 26.821 13.821 26.431 13.952 25.982C14.033 25.704 14.128 25.394 14.216 25.098L8.027 25.871C8.029 25.881 8.033 25.893 8.036 25.903ZM7.736 24.908L14.535 24.059C14.642 23.719 14.765 23.36 14.887 23H7.121C7.35 23.672 7.555 24.307 7.736 24.908ZM11 2C6.037 2 2 6.037 2 11C2 13.033 3.349 15.448 4.653 17.783C5.243 18.84 5.841 19.921 6.339 21H15.672C16.167 19.926 16.76 18.849 17.345 17.795C18.65 15.446 20 13.018 20 11C20 6.037 15.963 2 11 2ZM11 6C8.243 6 6 8.243 6 11C6 11.276 5.776 11.5 5.5 11.5C5.224 11.5 5 11.276 5 11C5 7.691 7.691 5 11 5C11.276 5 11.5 5.224 11.5 5.5C11.5 5.777 11.276 6 11 6Z"
+        fill="#666D89" />
+    </symbol>
+    <symbol id="services-3" width="100%" height="100%" viewBox="0 0 32 28" preserveAspectRatio="xMinYMin meet">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M29.1898 16.286C29.0688 16.4051 18.1368 27.2294 18.1368 27.2294C16.9548 28.3998 15.0418 28.3998 13.8588 27.2294C13.8588 27.2294 3.87575 17.3443 2.80575 16.286C-0.93525 12.5804 -0.93525 6.5741 2.80575 2.86957C6.43675 -0.725828 12.2378 -0.80092 15.9978 2.58222C19.7588 -0.80092 25.5598 -0.725828 29.1898 2.86957C32.9308 6.5741 32.9308 12.5804 29.1898 16.286ZM27.7628 4.28129C24.9208 1.46585 20.3468 1.36673 17.3538 4.05902L15.9978 5.27952L14.6418 4.05902C11.6488 1.36673 7.07675 1.46585 4.23275 4.28129C1.28275 7.20187 1.28275 11.9527 4.23275 14.8732L15.2858 25.8166C15.6768 26.2061 16.3178 26.2061 16.7108 25.8166L27.7628 14.8732C30.7138 11.9527 30.7138 7.20187 27.7628 4.28129ZM9.24975 6.10653C7.45575 6.10653 5.99975 7.56231 5.99975 9.3555V9.3565C5.99975 9.63284 5.77575 9.85711 5.49975 9.85711C5.22275 9.85711 4.99975 9.63284 4.99975 9.3565C4.99975 7.01063 6.90075 5.10931 9.24575 5.1073C9.24775 5.1073 9.24775 5.1063 9.24975 5.1063C9.52575 5.1063 9.74975 5.33058 9.74975 5.60692C9.74975 5.88325 9.52575 6.10653 9.24975 6.10653Z"
+        fill="#666D89" />
+    </symbol>
+    <symbol id="services-4" width="100%" height="100%" viewBox="0 0 22 32" preserveAspectRatio="xMinYMin meet">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M19 32.1062L3 32.1082C1.343 32.1082 0 30.7652 0 29.1082V3.10818C0 1.45018 1.343 0.107178 3 0.107178H19C20.657 0.107178 22 1.44918 22 3.10718V29.1072C22 30.7642 20.657 32.1062 19 32.1062ZM20 3.10718C20 2.55518 19.552 2.10718 19 2.10718L3 2.10818C2.448 2.10818 2 2.55618 2 3.10818V5.10818L20 5.10718V3.10718ZM20 6.10718H2V26.1042L20 26.1032V6.10718ZM20 27.1032L2 27.1042V29.1082C2 29.6592 2.448 30.1082 3 30.1082L19 30.1062C19.552 30.1062 20 29.6582 20 29.1072V27.1032ZM11.5 29.1032H10.5C10.224 29.1032 10 28.8792 10 28.6032C10 28.3262 10.224 28.1032 10.5 28.1032H11.5C11.776 28.1032 12 28.3262 12 28.6032C12 28.8792 11.776 29.1032 11.5 29.1032ZM9.5 3.10718H12.5C12.776 3.10718 13 3.33018 13 3.60718C13 3.88318 12.776 4.10718 12.5 4.10718H9.5C9.224 4.10718 9 3.88318 9 3.60718C9 3.33018 9.224 3.10718 9.5 3.10718Z"
+        fill="#666D89" />
+    </symbol>
+    <symbol id="services-5" width="100%" height="100%" viewBox="0 0 32 28" preserveAspectRatio="xMinYMin meet">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M16 24.0383C14.943 24.0383 13.913 23.9563 12.914 23.8103C12.23 24.6433 9.286 27.5143 6.161 28.0263C6.165 28.0133 6 28.0383 5.906 28.0383C5.405 28.0383 5 27.6333 5 27.1323C5 27.0053 5.027 26.8843 5.074 26.7743H5.072C5.661 25.7613 7 23.8313 7 22.0383C7 22.0093 7.008 21.9913 7.008 21.9643C2.779 19.8043 0 16.1653 0 12.0383C0 5.41133 7.163 0.0383301 16 0.0383301C24.836 0.0383301 32 5.41133 32 12.0383C32 18.6653 24.836 24.0383 16 24.0383ZM16 2.03833C8.28 2.03833 2 6.52433 2 12.0383C2 15.2453 4.212 18.2903 7.918 20.1833C8.587 20.5243 9.008 21.2133 9.008 21.9643C9.008 22.0203 9.005 22.0843 8.999 22.1483C8.979 23.1823 8.673 24.1863 8.283 25.0803C9.723 24.2243 10.94 23.0623 11.368 22.5413C11.751 22.0743 12.32 21.8093 12.914 21.8093C13.01 21.8093 13.107 21.8163 13.204 21.8313C14.143 21.9693 15.083 22.0383 16 22.0383C23.72 22.0383 30 17.5523 30 12.0383C30 6.52433 23.72 2.03833 16 2.03833ZM16 6.03833C10.673 6.03833 6 8.84233 6 12.0383C6 12.3143 5.776 12.5383 5.5 12.5383C5.224 12.5383 5 12.3143 5 12.0383C5 8.24433 10.037 5.03833 16 5.03833C16.276 5.03833 16.5 5.26233 16.5 5.53833C16.5 5.81533 16.276 6.03833 16 6.03833Z"
+        fill="#666D89" />
+    </symbol>
+    <symbol id="services-6" width="100%" height="100%" viewBox="0 0 32 32" preserveAspectRatio="xMinYMin meet">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M31.8811 11.9681C31.6041 11.1434 30.8931 10.5395 30.0381 10.4084L21.7121 9.13046L18.0921 1.37407C17.7121 0.55962 16.8961 0.0383301 16.0001 0.0383301C15.1041 0.0383301 14.2891 0.55962 13.9081 1.37407L10.2891 9.13046L1.96214 10.4084C1.10614 10.5395 0.39514 11.1434 0.12014 11.9681C-0.15586 12.7939 0.0521396 13.7044 0.65714 14.3268L6.75914 20.6164L5.34414 29.34C5.20014 30.2174 5.56914 31.1 6.29214 31.6141C6.68914 31.8948 7.15614 32.0383 7.62314 32.0383C8.00714 32.0383 8.39114 31.9413 8.74114 31.7493L16.0001 27.7152L23.2601 31.7493C23.6091 31.9413 23.9941 32.0383 24.3771 32.0383C24.8441 32.0383 25.3101 31.8948 25.7091 31.6141C26.4311 31.1 26.8001 30.2174 26.6571 29.34L25.2411 20.6164L31.3441 14.3268C31.9481 13.7044 32.1551 12.7939 31.8811 11.9681ZM23.5881 18.9937C23.0761 19.5212 22.8441 20.2623 22.9621 20.9901L24.3771 29.7147L17.1181 25.6817C16.7691 25.4876 16.3851 25.3916 16.0001 25.3916C15.6161 25.3916 15.2311 25.4876 14.8831 25.6817L7.62314 29.7147L9.03914 20.9901C9.15714 20.2623 8.92514 19.5212 8.41314 18.9937L2.31114 12.7062L10.6371 11.4252C11.3981 11.3085 12.0531 10.8182 12.3811 10.1173L16.0001 2.36194L19.6201 10.1173C19.9471 10.8182 20.6011 11.3085 21.3621 11.4252L29.6891 12.7062L23.5881 18.9937Z"
+        fill="#666D89" />
+    </symbol>
+  </svg>
 </body>
 
 </html>
