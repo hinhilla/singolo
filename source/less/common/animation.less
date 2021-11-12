@@ -1,4 +1,4 @@
-@keyframes slide-current {
+@keyframes next {
     0% {
     transform: translateX(-100%);
   }
@@ -6,7 +6,7 @@
     transform: translateX(0);
   }
 }
-@keyframes slide-not-current {
+@keyframes prev-out{
     0% {
     transform: translateX(0);
   }
@@ -14,7 +14,7 @@
     transform: translateX(100%);
   }
 }
-@keyframes slide-current-left {
+@keyframes prev {
     0% {
     transform: translateX(100%);
   }
@@ -22,7 +22,7 @@
     transform: translateX(0);
   }
 }
-@keyframes slide-not-current-left {
+@keyframes next-out{
     0% {
     transform: translateX(0);
   }
@@ -31,19 +31,15 @@
   }
 }
 
-.animation--current {
-  animation-name: slide-current;
-  animation-duration: 1s;
+.prev {
+  animation: prev 1s ease-in-out;
 }
-.animation--not-current {
-    animation-name: slide-not-current;
-  animation-duration: 1s;
+.prev-out {
+    animation: prev-out 1s ease-in-out;
 }
-.animation--current-left {
-  animation-name: slide-current-left;
-  animation-duration: 1s;
+.next {
+  animation: next 1s ease-in-out;
 }
-.animation--not-current-left{
-    animation-name: slide-not-current-left;
-  animation-duration: 1s;
+.next-out{
+    animation: next-out 1s ease-in-out;
 }

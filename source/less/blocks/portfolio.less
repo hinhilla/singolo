@@ -42,7 +42,8 @@ display: grid;
 grid-template-columns: min-content min-content;
 grid-template-rows: repeat(4, min-content);
 grid-gap: 13px;
-justify-content: center;
+min-height: 651px;
+
 @media (min-width: @tablet) {
 grid-template-columns: repeat(3, min-content);
 grid-gap: 20px;
@@ -52,18 +53,18 @@ grid-template-columns: repeat(4, min-content);
   }
 }
 
-.portfolio__item:nth-child(n + 9) {
-display: none;
-@media (min-width: @tablet) {
-  display: flex;
-}
+// .portfolio__item:nth-child(n + 9) {
+// display: none;
+// @media (min-width: @tablet) {
+//   display: flex;
+// }
 
-}
+// }
 
-   @media (min-width: @tablet) {
-.portfolio__item:nth-child(n + 13) {
-display: none;
-}  }
+//    @media (min-width: @tablet) {
+// .portfolio__item:nth-child(n + 13) {
+// display: none;
+// }  }
 
 
 

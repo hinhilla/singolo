@@ -23,26 +23,25 @@
           <button class="page-header__navigation-button">
             <span class="visually-hidden">navigation</span>
           </button>
-          <ul class="page-header__navigation-list">
-            <li class="page-header__navigation-item"> <a href="#home" class="page-header__navigation-link">home</a>
-            </li>
-            <li class="page-header__navigation-item">
-              <a href="#services" class="page-header__navigation-link">services</a>
-            </li>
-            <li class="page-header__navigation-item">
-              <a href="#portfolio" class="page-header__navigation-link">portfolio</a>
-            </li>
-            <li class="page-header__navigation-item">
-              <a class="page-header__navigation-link">about</a>
-            </li>
-            <li class="page-header__navigation-item">
-              <a href="#contact" class="page-header__navigation-link">contact</a>
-            </li>
-          </ul>
+          <div class="page-header__navigation-list-wrapper">
+            <ul class="page-header__navigation-list">
+              <li class="page-header__navigation-item"> <a href="#home" class="page-header__navigation-link">home</a>
+              </li>
+              <li class="page-header__navigation-item">
+                <a href="#services" class="page-header__navigation-link">services</a>
+              </li>
+              <li class="page-header__navigation-item">
+                <a href="#portfolio" class="page-header__navigation-link">portfolio</a>
+              </li>
+              <li class="page-header__navigation-item">
+                <a class="page-header__navigation-link">about</a>
+              </li>
+              <li class="page-header__navigation-item">
+                <a href="#contact" class="page-header__navigation-link">contact</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-
-
-
       </div>
     </div>
   </header>
@@ -51,20 +50,20 @@
       <div class="center--slider">
         <div class="page-main__slider slider">
           <ul class="slider__slide-list">
-            <li class="slider__slide slider__slide-1 slider__slide--current">
-              <img src="img/slider-1.png" alt="телефоны" class="slider__slide" width="796" height="483">
+            <li class="slider__slide slider__slide-1 slider__slide--is-active">
+              <img src="img/slider-1.png" alt="телефоны" class="slider__slide-img" width="796" height="483">
             </li>
-            <li class="slider__slide slider__slide-2 slider__slide--not-current">
-              <img src="img/slider-2.png" alt="телефоны" class="slider__slide" width="796" height="483">
+            <li class="slider__slide slider__slide-2">
+              <img src="img/slider-2.png" alt="телефоны" class="slider__slide-img" width="796" height="483">
             </li>
           </ul>
           <div class="slider__controls">
-            <button class="slider__button slider__button-left">
+            <button class="slider__button slider__button-prev" data-direction="prev">
               <svg class="slider__button-svg" width="17" height="29">
                 <use xlink:href=" #arrow"></use>
               </svg>
             </button>
-            <button class="slider__button slider__button-right">
+            <button class="slider__button slider__button-next" data-direction="next">
               <svg class="slider__button-svg" width="17" height="29">
                 <use xlink:href=" #arrow"></use>
               </svg>
@@ -162,39 +161,43 @@
           eget lacinia odio sem nec elit.</p>
         <nav class="portfolio__navigation">
           <ul class="portfolio__navigation-list">
-            <li class="portfolio__navigation-item"><button class="portfolio__item-button">All</button></li>
-            <li class="portfolio__navigation-item"><button class="portfolio__item-button">Web Design</button>
+            <li class="portfolio__navigation-item"><button class="portfolio__item-button"
+                data-item="all-button">All</button></li>
+            <li class="portfolio__navigation-item"><button class="portfolio__item-button"
+                data-item="web-design-button">Web Design</button>
             </li>
-            <li class="portfolio__navigation-item"><button class="portfolio__item-button">Graphic
+            <li class="portfolio__navigation-item"><button class="portfolio__item-button"
+                data-item="graphic-design-button">Graphic
                 Design</button></li>
-            <li class="portfolio__navigation-item"><button class="portfolio__item-button">Artwork</button></li>
+            <li class="portfolio__navigation-item"><button class="portfolio__item-button"
+                data-item="artwork-button">Artwork</button></li>
           </ul>
         </nav>
         <ul class="portfolio__list">
-          <li class="portfolio__item"><img src="img/portfolio-1.jpg" alt="Изображение 1" width="128" height=" 108.5"
-              class="portfolio__image"></li>
-          <li class="portfolio__item"><img src="img/portfolio-2.jpg" alt="Изображение 2" class="portfolio__image"
-              width=" 128" height=" 108.5"></li>
-          <li class="portfolio__item"><img src="img/portfolio-3.jpg" alt="Изображение 3" class="portfolio__image"
-              width=" 128" height=" 108.5"></li>
-          <li class="portfolio__item"><img src="img/portfolio-4.jpg" alt="Изображение 4" class="portfolio__image"
-              width=" 128" height=" 108.5"></li>
-          <li class="portfolio__item"><img src="img/portfolio-5.jpg" alt="Изображение 5" class="portfolio__image"
-              width=" 128" height=" 108.5"></li>
-          <li class="portfolio__item"><img src="img/portfolio-6.jpg" alt="Изображение 6" class="portfolio__image"
-              width=" 128" height=" 108.5"></li>
-          <li class="portfolio__item"><img src="img/portfolio-7.jpg" alt="Изображение 7" class="portfolio__image"
-              width=" 128" height=" 108.5"></li>
-          <li class="portfolio__item"><img src="img/portfolio-8.jpg" alt="Изображение 8" class="portfolio__image"
-              width=" 128" height=" 108.5"></li>
-          <li class="portfolio__item"><img src="img/portfolio-9.jpg" alt="Изображение 9" class="portfolio__image"
-              width=" 128" height=" 108.5"></li>
-          <li class="portfolio__item"><img src="img/portfolio-10.jpg" alt="Изображение 10" class="portfolio__image"
-              width=" 128" height=" 108.5"></li>
-          <li class="portfolio__item"><img src="img/portfolio-11.jpg" alt="Изображение 11" class="portfolio__image"
-              width=" 128" height=" 108.5"></li>
-          <li class="portfolio__item"><img src="img/portfolio-12.jpg" alt="Изображение 12" class="portfolio__image"
-              width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-1.jpg" alt="Изображение 1"
+              width="128" height=" 108.5" class="portfolio__image"></li>
+          <li class="portfolio__item" data-item="artwork"><img src="img/portfolio-2.jpg" alt="Изображение 2"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-3.jpg" alt="Изображение 3"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="graphic-design"><img src="img/portfolio-4.jpg" alt="Изображение 4"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-5.jpg" alt="Изображение 5"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="artwork"><img src="img/portfolio-6.jpg" alt="Изображение 6"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-7.jpg" alt="Изображение 7"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="graphic-design"><img src="img/portfolio-8.jpg" alt="Изображение 8"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-9.jpg" alt="Изображение 9"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="artwork"><img src="img/portfolio-10.jpg" alt="Изображение 10"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="web-design"><img src="img/portfolio-11.jpg" alt="Изображение 11"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
+          <li class="portfolio__item" data-item="graphic-design"><img src="img/portfolio-12.jpg" alt="Изображение 12"
+              class="portfolio__image" width=" 128" height=" 108.5"></li>
           `
         </ul>
       </div>
